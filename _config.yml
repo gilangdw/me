@@ -6,13 +6,13 @@ favicon: images/favicon.ico
 version: 2
 
 # Personal info
-name: Brett Harris
-title: Senior Network System Administrator
-email: brett.h@email.co.uk
-website: www.github.com/sproogen/resume-theme
+name: Gilang Destya Widodo
+title: CFD Engineer (OpenFOAM)
+email: gilangdw@outlook.com
+website: https://gilangdw.github.io/home/
 
 # Dark Mode (true/false/never)
-darkmode: false
+darkmode: true
 
 # Social links
 twitter_username: facespics
@@ -21,11 +21,11 @@ github_username:  sproogen
 # dribbble_username: jekyll
 # facebook_username: jekyll
 # flickr_username: jekyll
-instagram_username: jameswgrant
-linkedin_username: jameswgrant
+instagram_username: -
+linkedin_username: gilangdw
 # xing_username: jekyll
 # pinterest_username: jekyll
-youtube_username: globalmtb
+youtube_username: -
 # googleplus_username: +jekyll
 # orcid_username: 0000-0000-0000-0000
 
