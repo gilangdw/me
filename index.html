@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Online - Nama Anda</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            text-transform: uppercase;
+            font-size: 1.2em;
+        }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item-title {
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .date {
+            color: #888;
+            font-style: italic;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+        }
+
+        @media (max-width: 600px) {
+            .container { margin: 10px; padding: 20px; }
+            .item-title { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>NAMA LENGKAP ANDA</h1>
+        <div class="contact-info">
+            📍 Jakarta, Indonesia | 📧 email@anda.com | 📱 0812-3456-7890<br>
+            🔗 <a href="#">linkedin.com/in/username</a> | 🌐 <a href="#">portfolio-anda.com</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Profil Profesional</h2>
+        <p>
+            Seorang Profesional di bidang [Sebutkan Bidang Anda] dengan pengalaman lebih dari [X] tahun. 
+            Ahli dalam mengelola proyek, pengembangan strategi, dan memiliki kemampuan analitis yang kuat 
+            untuk mencapai target perusahaan.
+        </p>
+    </section>
+
+    <section>
+        <h2>Pengalaman Kerja</h2>
+        <div class="item">
+            <div class="item-title">
+                <span>Senior Web Developer - PT. Teknologi Maju</span>
+                <span class="date">2020 - Sekarang</span>
+            </div>
+            <ul>
+                <li>Memimpin tim pengembang dalam membangun aplikasi e-commerce berskala besar.</li>
+                <li>Mengoptimalkan performa website hingga meningkatkan kecepatan loading sebesar 40%.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-title">
+                <span>Junior Developer - Startup Kreatif</span>
+                <span class="date">2018 - 2020</span>
+            </div>
+            <ul>
+                <li>Mengembangkan fitur user interface menggunakan React.js.</li>
+                <li>Bekerja sama dengan tim desain untuk memastikan UI/UX yang responsif.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Pendidikan</h2>
+        <div class="item">
+            <div class="item-title">
+                <span>S1 Teknik Informatika - Universitas Indonesia</span>
+                <span class="date">2014 - 2018</span>
+            </div>
+            <p>IPK: 3.85 / 4.00</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Keahlian</h2>
+        <div class="skills-container">
+            <span class="skill-badge">HTML/CSS</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">React.js</span>
+            <span class="skill-badge">Project Management</span>
+            <span class="skill-badge">Public Speaking</span>
+            <span class="skill-badge">UI/UX Design</span>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
