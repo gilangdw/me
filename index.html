@@ -3,283 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Me - Gilang Destya Widodo</title>
+    <title>CV ATS-Friendly - Gilang Destya Widodo</title>
     <style>
-        :root {
-            --primary: #2563eb;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --accent: #3b82f6;
-            --text: #334155;
-        }
-
         body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background-color: var(--light);
-            color: var(--text);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 900px;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            max-width: 800px;
             margin: 40px auto;
-            background: #ffffff;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            border-radius: 12px;
-            overflow: hidden;
+            padding: 0 20px;
         }
-
-        /* Header Section */
-        header {
-            background: var(--dark);
-            color: white;
-            padding: 40px;
+        h1 {
             text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-size: 24px;
         }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-            letter-spacing: -0.5px;
-        }
-
-        header p {
-            margin: 10px 0 0;
-            opacity: 0.8;
-            font-weight: 300;
-        }
-
-        .contact-bar {
-            background: var(--primary);
-            color: white;
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            font-size: 0.85rem;
-        }
-
-        /* Main Content */
-        .main-content {
-            padding: 40px;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            color: var(--dark);
-            border-bottom: 2px solid var(--accent);
-            display: inline-block;
+        .contact-info {
+            text-align: center;
             margin-bottom: 20px;
-            padding-bottom: 5px;
-            font-size: 1.4rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
         }
-
-        /* Experience & Education */
-        .timeline-item {
-            margin-bottom: 25px;
-            position: relative;
-            padding-left: 20px;
-            border-left: 2px solid #e2e8f0;
+        h2 {
+            text-transform: uppercase;
+            font-size: 18px;
+            border-bottom: 1px solid #333;
+            margin-top: 25px;
+            margin-bottom: 10px;
         }
-
-        .item-header {
+        .job-title {
+            font-weight: bold;
             display: flex;
             justify-content: space-between;
-            font-weight: 700;
-            color: var(--dark);
         }
-
-        .item-sub {
-            color: var(--primary);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .date {
-            color: #64748b;
-            font-size: 0.85rem;
-        }
-
-        ul {
-            padding-left: 18px;
-            margin-top: 8px;
-        }
-
-        li {
+        .company-name {
+            font-style: italic;
+            display: block;
             margin-bottom: 5px;
         }
-
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+        .summary, .skills, .experience, .education {
+            margin-bottom: 15px;
         }
-
-        .skill-category {
-            background: #f1f5f9;
-            padding: 15px;
-            border-radius: 8px;
+        ul {
+            margin-top: 5px;
+            padding-left: 20px;
         }
-
-        .skill-category h4 {
-            margin: 0 0 10px 0;
-            color: var(--dark);
+        li {
+            margin-bottom: 3px;
         }
-
-        .badge {
-            display: inline-block;
-            background: white;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin: 2px;
-            border: 1px solid #cbd5e1;
-        }
-
-        @media (max-width: 600px) {
-            .item-header { flex-direction: column; }
-            .container { margin: 0; border-radius: 0; }
+        .date {
+            font-weight: normal;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <h1>Gilang Destya Widodo, S.T., M.Eng.</h1>
-        <p>CFD Engineer | Technical Professional</p>
-    </header>
-
-    <div class="contact-bar">
-        <span>📍 Yogyakarta, Indonesia</span>
-        <span>📧 gilangdw@outlook.com</span>
+    <h1>GILANG Destya Widodo, S.T., M.Eng. [cite: 2, 23]</h1>
+    <div class="contact-info">
+        Yogyakarta, Indonesia [cite: 3] | +62 8564 36 39 309 [cite: 3] | gilangdestyawidodo@gmail.com [cite: 3]<br>
+        LinkedIn: linkedin.com/in/gilangdestyawidodo
     </div>
 
-    <div class="main-content">
-        <section>
-            <h2>Riwayat Pendidikan</h2>
-            <div class="timeline-item">
-                <div class="item-header">
-                    <span>Teknik Mesin, Universitas Gadjah Mada</span>
-                    <span class="date">2020 - 2024</span>
-                </div>
-                <div class="item-sub">Magister Teknik (M.Eng.)</div>
-            </div>
-            <div class="timeline-item">
-                <div class="item-header">
-                    <span>Teknik Fisika, Universitas Gadjah Mada</span>
-                    <span class="date">2010 - 2014</span>
-                </div>
-                <div class="item-sub">Sarjana Teknik (S.T.)</div>
-            </div>
-        </section>
+    <section class="summary">
+        <h2>Ringkasan Profesional</h2>
+        <p>
+            Lulusan Magister Teknik Mesin Universitas Gadjah Mada dengan spesialisasi Computational Fluid Dynamics (CFD)[cite: 6, 64]. 
+            Memiliki pengalaman profesional sebagai CFD Engineer dalam menyusun script case directory OpenFOAM dan pengembangan metode meshing pada geometri kompleks[cite: 64, 66]. 
+            Ahli dalam optimasi operasional melalui pengembangan aplikasi VBA Excel untuk sistem keuangan dan absensi kerja[cite: 59, 62, 63].
+        </p>
+    </section>
 
-        <section>
-            <h2>Pengalaman Kerja</h2>
+    <section class="skills">
+        <h2>Keahlian Utama</h2>
+        <ul>
+            <li><strong>Engineering Tools:</strong> OpenFOAM (ESI & Foundation), SALOME, Paraview, Snappy Hex Mesh[cite: 15, 17, 19, 66].</li>
+            <li><strong>Simulasi & Analisis:</strong> Single Phase, Multiphase, Compressible Flow, HVAC[cite: 18, 64, 65].</li>
+            <li><strong>Pemrograman & Data:</strong> VBA Excel (Macro), Pivot Table, Linked Database, PETSc matrix solver berbasis GPU[cite: 9, 10, 59, 66].</li>
+            <li><strong>Manajemen & Desain:</strong> Perancangan RKAT, Pengembangan SOP, Inkscape, Corel Draw[cite: 13, 52, 53, 56, 61].</li>
+        </ul>
+    </section>
 
-            <div class="timeline-item">
-                <div class="item-header">
-                    <span>CFD Engineer and Educator</span>
-                    <span class="date">Des 2025 - sekarang</span>
-                </div>
-                <div class="item-sub">PT. Kolaborasi</div>
-                <ul>
-                    <li>Menyusun script case directory OpenFOAM (dua fasa & compressible bouyant/HVAC)[cite: 64, 65].</li>
-                    <li>Pengembangan metode meshing pada geometri kompleks (SALOME & Snappy Hex Mesh)[cite: 66].</li>
-                    <li>Implementasi PETSc matrix solver berbasis GPU[cite: 66].</li>
-                </ul>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="item-header">
-                    <span>CFD Engineer</span>
-                    <span class="date">Mar 2025 - Nov 2025</span>
-                </div>
-                <div class="item-sub">PT. Infimech Harmoni Teknologi</div>
-                <ul>
-                    <li>Menyusun script case directory OpenFOAM (dua fasa & compressible bouyant/HVAC)[cite: 64, 65].</li>
-                    <li>Pengembangan metode meshing pada geometri kompleks (SALOME & Snappy Hex Mesh)[cite: 66].</li>
-                    <li>Implementasi PETSc matrix solver berbasis GPU[cite: 66].</li>
-                </ul>
-            </div>
+    <section class="experience">
+        <h2>Pengalaman Kerja</h2>
 
-            <div class="timeline-item">
-                <div class="item-header">
-                    <span>Manajer Keuangan & Operasional</span>
-                    <span class="date">Apr 2023 - Feb 2025</span>
-                </div>
-                <div class="item-sub">KL Lazismu Mantrijeron</div>
-                <ul>
-                    <li>Merancang RKAT dan Mengembangkan SOP Aplikasi RKAT[cite: 61].</li>
-                    <li>Mengembangkan aplikasi Excel VBA untuk keuangan dan absensi[cite: 62, 63].</li>
-                </ul>
+        <div class="job-item">
+            <div class="job-title">
+                <span>CFD Engineer</span>
+                <span class="date">Maret 2025 - Desember 2025 [cite: 64]</span>
             </div>
+            <span class="company-name">PT. Infimech Harmoni Teknologi [cite: 64]</span>
+            <ul>
+                <li>Menyusun script case directory OpenFOAM dalam pemodelan aliran dua fasa serta aliran compressible buoyant untuk kebutuhan HVAC[cite: 64, 65].</li>
+                <li>Melakukan pengembangan metode meshing pada geometri kompleks maupun berukuran besar menggunakan SALOME dan Snappy Hex Mesh[cite: 66].</li>
+                <li>Mengimplementasikan PETSc matrix solver berbasis GPU untuk meningkatkan efisiensi proses komputasi simulasi[cite: 66].</li>
+            </ul>
+        </div>
 
-            <div class="timeline-item">
-                <div class="item-header">
-                    <span>Asisten Penelitian</span>
-                    <span class="date">2015</span>
-                </div>
-                <div class="item-sub">Teknik Fisika UGM</div>
-                <ul>
-                    <li>Peningkatan fungsi mikroskop untuk diagnosis sel darah putih[cite: 34, 35].</li>
-                    <li>Manajemen laporan keuangan dan monitoring evaluasi penelitian[cite: 37, 38].</li>
-                </ul>
+        <div class="job-item">
+            <div class="job-title">
+                <span>Manajer Keuangan dan Operasional</span>
+                <span class="date">April 2023 - Februari 2025 [cite: 60]</span>
             </div>
-        </section>
+            <span class="company-name">KL Lazismu Mantrijeron [cite: 60]</span>
+            <ul>
+                <li>Merancang RKAT dan mengembangkan standar operasional prosedur (SOP) aplikasi RKAT lembaga[cite: 61].</li>
+                <li>Mengembangkan aplikasi berbasis VBA Excel untuk otomatisasi laporan keuangan dan sistem absensi kerja staf[cite: 62, 63].</li>
+            </ul>
+        </div>
 
-        <section>
-            <h2>Keahlian Teknis</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Engineering Tools</h4>
-                    <span class="badge">OpenFOAM</span>
-                    <span class="badge">SALOME</span>
-                    <span class="badge">Paraview</span>
-                    <span class="badge">CFD Simulation</span>
-                </div>
-                <div class="skill-category">
-                    <h4>Software & Dev</h4>
-                    <span class="badge">VBA Programming</span>
-                    <span class="badge">Excel Pivot Table</span>
-                    <span class="badge">Inkscape</span>
-                    <span class="badge">Corel Draw</span>
-                </div>
-                <div class="skill-category">
-                    <h4>Management</h4>
-                    <span class="badge">RKAT Design</span>
-                    <span class="badge">Financial Reporting</span>
-                    <span class="badge">SOP Development</span>
-                </div>
+        <div class="job-item">
+            <div class="job-title">
+                <span>Kepala Kantor</span>
+                <span class="date">April 2019 - Maret 2023 [cite: 55]</span>
             </div>
-        </section>
+            <span class="company-name">Lazismu KL Mantrijeron [cite: 55]</span>
+            <ul>
+                <li>Membangun komunikasi strategis dengan pengampu kepentingan di tingkat kecamatan untuk koordinasi program[cite: 57].</li>
+                <li>Memastikan operasional lembaga berjalan sesuai aturan tata kelola yang berlaku[cite: 58].</li>
+                <li>Mengembangkan aplikasi Excel VBA untuk keperluan analisis data donatur dan keuangan lembaga[cite: 59].</li>
+            </ul>
+        </div>
 
-        <section>
-            <h2>Organisasi</h2>
-            <div class="timeline-item">
-                <div class="item-header">
-                    <span>Badan Pengurus IT</span>
-                    <span class="date">2025 - Sekarang</span>
-                </div>
-                <div class="item-sub">LAZISMU Kota Yogyakarta</div>
+        <div class="job-item">
+            <div class="job-title">
+                <span>Asisten Penelitian</span>
+                <span class="date">Maret 2015 - Oktober 2015 [cite: 34]</span>
             </div>
-            <div class="timeline-item">
-                <div class="item-header">
-                    <span>Anggota Bidang Riset & Teknologi</span>
-                    <span class="date">2023 - Sekarang</span>
-                </div>
-                <div class="item-sub">PWPM DIY</div>
+            <span class="company-name">Teknik Fisika, Universitas Gadjah Mada [cite: 34]</span>
+            <ul>
+                <li>Mengelola administrasi dan laporan keuangan penelitian terkait peningkatan fungsi mikroskop untuk diagnosis sel darah[cite: 35, 37].</li>
+                <li>Mendampingi mahasiswa tugas akhir dalam pelaksanaan riset agar sesuai dengan jadwal monitoring dan evaluasi[cite: 36, 38].</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="education">
+        <h2>Pendidikan</h2>
+        <div class="job-item">
+            <div class="job-title">
+                <span>Teknik Mesin, Universitas Gadjah Mada</span>
+                <span class="date">2020 - 2024 [cite: 6]</span>
             </div>
-        </section>
-    </div>
-</div>
+            <span class="company-name">Magister Teknik (M.Eng.) [cite: 2, 23]</span>
+        </div>
+        <div class="job-item">
+            <div class="job-title">
+                <span>Teknik Fisika, Universitas Gadjah Mada</span>
+                <span class="date">2010 - 2014 [cite: 6]</span>
+            </div>
+            <span class="company-name">Sarjana Teknik (S.T.) [cite: 2, 23]</span>
+        </div>
+    </section>
 
 </body>
 </html>
