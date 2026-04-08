@@ -3,96 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Online - Nama Anda</title>
+    <title>Me - Gilang Destya Widodo</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
-            --text-color: #333;
-            --bg-color: #f4f7f6;
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --accent: #3b82f6;
+            --text: #334155;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--light);
+            color: var(--text);
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
         }
 
         .container {
-            max-width: 800px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            max-width: 900px;
+            margin: 40px auto;
+            background: #ffffff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            overflow: hidden;
         }
 
+        /* Header Section */
         header {
+            background: var(--dark);
+            color: white;
+            padding: 40px;
             text-align: center;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
         }
 
-        h1 {
+        header h1 {
             margin: 0;
-            color: var(--primary-color);
-            letter-spacing: 1px;
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
         }
 
-        .contact-info {
-            margin-top: 10px;
-            font-size: 0.9em;
-            color: #666;
+        header p {
+            margin: 10px 0 0;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        .contact-bar {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 40px;
         }
 
         section {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         h2 {
-            color: var(--accent-color);
-            border-left: 5px solid var(--accent-color);
-            padding-left: 15px;
-            text-transform: uppercase;
-            font-size: 1.2em;
-        }
-
-        .item {
+            color: var(--dark);
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
             margin-bottom: 20px;
+            padding-bottom: 5px;
+            font-size: 1.4rem;
         }
 
-        .item-title {
-            font-weight: bold;
+        /* Experience & Education */
+        .timeline-item {
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid #e2e8f0;
+        }
+
+        .item-header {
             display: flex;
             justify-content: space-between;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .item-sub {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
         .date {
-            color: #888;
-            font-style: italic;
+            color: #64748b;
+            font-size: 0.85rem;
         }
 
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+        ul {
+            padding-left: 18px;
+            margin-top: 8px;
         }
 
-        .skill-badge {
-            background: var(--primary-color);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.85em;
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .skill-category h4 {
+            margin: 0 0 10px 0;
+            color: var(--dark);
+        }
+
+        .badge {
+            display: inline-block;
+            background: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin: 2px;
+            border: 1px solid #cbd5e1;
         }
 
         @media (max-width: 600px) {
-            .container { margin: 10px; padding: 20px; }
-            .item-title { flex-direction: column; }
+            .item-header { flex-direction: column; }
+            .container { margin: 0; border-radius: 0; }
         }
     </style>
 </head>
@@ -100,69 +153,120 @@
 
 <div class="container">
     <header>
-        <h1>NAMA LENGKAP ANDA</h1>
-        <div class="contact-info">
-            📍 Jakarta, Indonesia | 📧 email@anda.com | 📱 0812-3456-7890<br>
-            🔗 <a href="#">linkedin.com/in/username</a> | 🌐 <a href="#">portfolio-anda.com</a>
-        </div>
+        <h1>Gilang Destya Widodo, S.T., M.Eng.</h1>
+        <p>CFD Engineer | Technical Professional</p>
     </header>
 
-    <section>
-        <h2>Profil Profesional</h2>
-        <p>
-            Seorang Profesional di bidang [Sebutkan Bidang Anda] dengan pengalaman lebih dari [X] tahun. 
-            Ahli dalam mengelola proyek, pengembangan strategi, dan memiliki kemampuan analitis yang kuat 
-            untuk mencapai target perusahaan.
-        </p>
-    </section>
+    <div class="contact-bar">
+        <span>📍 Yogyakarta, Indonesia</span>
+        <span>📱 +62 8564 36 39 309</span>
+        <span>📧 gilangdestyawidodo@gmail.com</span>
+    </div>
 
-    <section>
-        <h2>Pengalaman Kerja</h2>
-        <div class="item">
-            <div class="item-title">
-                <span>Senior Web Developer - PT. Teknologi Maju</span>
-                <span class="date">2020 - Sekarang</span>
+    <div class="main-content">
+        <section>
+            <h2>Riwayat Pendidikan</h2>
+            <div class="timeline-item">
+                <div class="item-header">
+                    <span>Teknik Mesin, Universitas Gadjah Mada</span>
+                    <span class="date">2020 - 2024</span>
+                </div>
+                <div class="item-sub">Magister Teknik (M.Eng.)</div>
             </div>
-            <ul>
-                <li>Memimpin tim pengembang dalam membangun aplikasi e-commerce berskala besar.</li>
-                <li>Mengoptimalkan performa website hingga meningkatkan kecepatan loading sebesar 40%.</li>
-            </ul>
-        </div>
-
-        <div class="item">
-            <div class="item-title">
-                <span>Junior Developer - Startup Kreatif</span>
-                <span class="date">2018 - 2020</span>
+            <div class="timeline-item">
+                <div class="item-header">
+                    <span>Teknik Fisika, Universitas Gadjah Mada</span>
+                    <span class="date">2010 - 2014</span>
+                </div>
+                <div class="item-sub">Sarjana Teknik (S.T.)</div>
             </div>
-            <ul>
-                <li>Mengembangkan fitur user interface menggunakan React.js.</li>
-                <li>Bekerja sama dengan tim desain untuk memastikan UI/UX yang responsif.</li>
-            </ul>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <h2>Pendidikan</h2>
-        <div class="item">
-            <div class="item-title">
-                <span>S1 Teknik Informatika - Universitas Indonesia</span>
-                <span class="date">2014 - 2018</span>
+        <section>
+            <h2>Pengalaman Kerja</h2>
+            
+            <div class="timeline-item">
+                <div class="item-header">
+                    <span>CFD Engineer</span>
+                    <span class="date">Mar 2025 - Des 2025</span>
+                </div>
+                <div class="item-sub">PT. Infimech Harmoni Teknologi</div>
+                <ul>
+                    <li>Menyusun script case directory OpenFOAM (dua fasa & compressible bouyant/HVAC)[cite: 64, 65].</li>
+                    <li>Pengembangan metode meshing pada geometri kompleks (SALOME & Snappy Hex Mesh)[cite: 66].</li>
+                    <li>Implementasi PETSc matrix solver berbasis GPU[cite: 66].</li>
+                </ul>
             </div>
-            <p>IPK: 3.85 / 4.00</p>
-        </div>
-    </section>
 
-    <section>
-        <h2>Keahlian</h2>
-        <div class="skills-container">
-            <span class="skill-badge">HTML/CSS</span>
-            <span class="skill-badge">JavaScript</span>
-            <span class="skill-badge">React.js</span>
-            <span class="skill-badge">Project Management</span>
-            <span class="skill-badge">Public Speaking</span>
-            <span class="skill-badge">UI/UX Design</span>
-        </div>
-    </section>
+            <div class="timeline-item">
+                <div class="item-header">
+                    <span>Manajer Keuangan & Operasional</span>
+                    <span class="date">Apr 2023 - Feb 2025</span>
+                </div>
+                <div class="item-sub">KL Lazismu Mantrijeron</div>
+                <ul>
+                    <li>Merancang RKAT dan Mengembangkan SOP Aplikasi RKAT[cite: 61].</li>
+                    <li>Mengembangkan aplikasi Excel VBA untuk keuangan dan absensi[cite: 62, 63].</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="item-header">
+                    <span>Asisten Penelitian</span>
+                    <span class="date">2015</span>
+                </div>
+                <div class="item-sub">Teknik Fisika UGM</div>
+                <ul>
+                    <li>Peningkatan fungsi mikroskop untuk diagnosis sel darah putih[cite: 34, 35].</li>
+                    <li>Manajemen laporan keuangan dan monitoring evaluasi penelitian[cite: 37, 38].</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Keahlian Teknis</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Engineering Tools</h4>
+                    <span class="badge">OpenFOAM</span>
+                    <span class="badge">SALOME</span>
+                    <span class="badge">Paraview</span>
+                    <span class="badge">CFD Simulation</span>
+                </div>
+                <div class="skill-category">
+                    <h4>Software & Dev</h4>
+                    <span class="badge">VBA Programming</span>
+                    <span class="badge">Excel Pivot Table</span>
+                    <span class="badge">Inkscape</span>
+                    <span class="badge">Corel Draw</span>
+                </div>
+                <div class="skill-category">
+                    <h4>Management</h4>
+                    <span class="badge">RKAT Design</span>
+                    <span class="badge">Financial Reporting</span>
+                    <span class="badge">SOP Development</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Organisasi</h2>
+            <div class="timeline-item">
+                <div class="item-header">
+                    <span>Badan Pengurus IT</span>
+                    <span class="date">2025 - Sekarang</span>
+                </div>
+                <div class="item-sub">LAZISMU Kota Yogyakarta</div>
+            </div>
+            <div class="timeline-item">
+                <div class="item-header">
+                    <span>Anggota Bidang Riset & Teknologi</span>
+                    <span class="date">2023 - Sekarang</span>
+                </div>
+                <div class="item-sub">PWPM DIY</div>
+            </div>
+        </section>
+    </div>
 </div>
 
 </body>
