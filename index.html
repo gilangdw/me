@@ -1,160 +1,24 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV ATS-Friendly - Gilang Destya Widodo</title>
+    <title>My Fluid Blog</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.5;
-            color: #333;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        h1 {
-            text-align: center;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-            font-size: 24px;
-        }
-        .contact-info {
-            text-align: center;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-        }
-        h2 {
-            text-transform: uppercase;
-            font-size: 18px;
-            border-bottom: 1px solid #333;
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
-        .job-title {
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-        }
-        .company-name {
-            font-style: italic;
-            display: block;
-            margin-bottom: 5px;
-        }
-        .summary, .skills, .experience, .education {
-            margin-bottom: 15px;
-        }
-        ul {
-            margin-top: 5px;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 3px;
-        }
-        .date {
-            font-weight: normal;
+        body, html { margin: 0; padding: 0; overflow: hidden; background: #000; }
+        canvas { width: 100%; height: 100%; }
+        /* Keep your content above the background */
+        #content {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            pointer-events: none; /* Allows mouse to pass through to fluid */
         }
     </style>
 </head>
 <body>
+    <div id="content"><h1>Welcome to my Blog</h1></div>
+    <canvas id="fluid"></canvas>
 
-    <h1>GILANG Destya Widodo, S.T., M.Eng. [cite: 2, 23]</h1>
-    <div class="contact-info">
-        Yogyakarta, Indonesia | gilangdw@outlook.com<br>
-        LinkedIn: linkedin.com/in/gilangdw
-    </div>
-
-    <section class="summary">
-        <h2>Ringkasan Profesional</h2>
-        <p>
-            Lulusan Magister Teknik Mesin Universitas Gadjah Mada dengan spesialisasi Computational Fluid Dynamics (CFD)[cite: 6, 64]. 
-            Memiliki pengalaman profesional sebagai CFD Engineer dalam menyusun script case directory OpenFOAM dan pengembangan metode meshing pada geometri kompleks[cite: 64, 66]. 
-            Ahli dalam optimasi operasional melalui pengembangan aplikasi VBA Excel untuk sistem keuangan dan absensi kerja[cite: 59, 62, 63].
-        </p>
-    </section>
-
-    <section class="skills">
-        <h2>Keahlian Utama</h2>
-        <ul>
-            <li><strong>Engineering Tools:</strong> OpenFOAM (ESI & Foundation), SALOME, Paraview, Snappy Hex Mesh[cite: 15, 17, 19, 66].</li>
-            <li><strong>Simulasi & Analisis:</strong> Single Phase, Multiphase, Compressible Flow, HVAC[cite: 18, 64, 65].</li>
-            <li><strong>Pemrograman & Data:</strong> VBA Excel (Macro), Pivot Table, Linked Database, PETSc matrix solver berbasis GPU[cite: 9, 10, 59, 66].</li>
-            <li><strong>Manajemen & Desain:</strong> Perancangan RKAT, Pengembangan SOP, Inkscape, Corel Draw[cite: 13, 52, 53, 56, 61].</li>
-        </ul>
-    </section>
-
-    <section class="experience">
-        <h2>Pengalaman Kerja</h2>
-
-        <div class="job-item">
-            <div class="job-title">
-                <span>CFD Engineer</span>
-                <span class="date">Maret 2025 - Desember 2025 [cite: 64]</span>
-            </div>
-            <span class="company-name">PT. Infimech Harmoni Teknologi [cite: 64]</span>
-            <ul>
-                <li>Menyusun script case directory OpenFOAM dalam pemodelan aliran dua fasa serta aliran compressible buoyant untuk kebutuhan HVAC[cite: 64, 65].</li>
-                <li>Melakukan pengembangan metode meshing pada geometri kompleks maupun berukuran besar menggunakan SALOME dan Snappy Hex Mesh[cite: 66].</li>
-                <li>Mengimplementasikan PETSc matrix solver berbasis GPU untuk meningkatkan efisiensi proses komputasi simulasi[cite: 66].</li>
-            </ul>
-        </div>
-
-        <div class="job-item">
-            <div class="job-title">
-                <span>Manajer Keuangan dan Operasional</span>
-                <span class="date">April 2023 - Februari 2025 [cite: 60]</span>
-            </div>
-            <span class="company-name">KL Lazismu Mantrijeron [cite: 60]</span>
-            <ul>
-                <li>Merancang RKAT dan mengembangkan standar operasional prosedur (SOP) aplikasi RKAT lembaga[cite: 61].</li>
-                <li>Mengembangkan aplikasi berbasis VBA Excel untuk otomatisasi laporan keuangan dan sistem absensi kerja staf[cite: 62, 63].</li>
-            </ul>
-        </div>
-
-        <div class="job-item">
-            <div class="job-title">
-                <span>Kepala Kantor</span>
-                <span class="date">April 2019 - Maret 2023 [cite: 55]</span>
-            </div>
-            <span class="company-name">Lazismu KL Mantrijeron [cite: 55]</span>
-            <ul>
-                <li>Membangun komunikasi strategis dengan pengampu kepentingan di tingkat kecamatan untuk koordinasi program[cite: 57].</li>
-                <li>Memastikan operasional lembaga berjalan sesuai aturan tata kelola yang berlaku[cite: 58].</li>
-                <li>Mengembangkan aplikasi Excel VBA untuk keperluan analisis data donatur dan keuangan lembaga[cite: 59].</li>
-            </ul>
-        </div>
-
-        <div class="job-item">
-            <div class="job-title">
-                <span>Asisten Penelitian</span>
-                <span class="date">Maret 2015 - Oktober 2015 [cite: 34]</span>
-            </div>
-            <span class="company-name">Teknik Fisika, Universitas Gadjah Mada [cite: 34]</span>
-            <ul>
-                <li>Mengelola administrasi dan laporan keuangan penelitian terkait peningkatan fungsi mikroskop untuk diagnosis sel darah[cite: 35, 37].</li>
-                <li>Mendampingi mahasiswa tugas akhir dalam pelaksanaan riset agar sesuai dengan jadwal monitoring dan evaluasi[cite: 36, 38].</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="education">
-        <h2>Pendidikan</h2>
-        <div class="job-item">
-            <div class="job-title">
-                <span>Teknik Mesin, Universitas Gadjah Mada</span>
-                <span class="date">2020 - 2024 [cite: 6]</span>
-            </div>
-            <span class="company-name">Magister Teknik (M.Eng.) [cite: 2, 23]</span>
-        </div>
-        <div class="job-item">
-            <div class="job-title">
-                <span>Teknik Fisika, Universitas Gadjah Mada</span>
-                <span class="date">2010 - 2014 [cite: 6]</span>
-            </div>
-            <span class="company-name">Sarjana Teknik (S.T.) [cite: 2, 23]</span>
-        </div>
-    </section>
-
+    <script src="https://cdn.jsdelivr.net/gh/PavelDoGreat/WebGL-Fluid-Simulation/scripts/script.js"></script>
 </body>
 </html>
