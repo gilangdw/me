@@ -236,7 +236,7 @@ function startGUI () {
     captureFolder.add(config, 'TRANSPARENT').name('transparent');
     captureFolder.add({ fun: captureScreenshot }, 'fun').name('take screenshot');
 
-    let github = gui.add({ fun : () => {
+/*    let github = gui.add({ fun : () => {
         window.open('https://github.com/PavelDoGreat/WebGL-Fluid-Simulation');
         ga('send', 'event', 'link button', 'github');
     } }, 'fun').name('Github');
@@ -264,7 +264,7 @@ function startGUI () {
     discord.__li.style.borderLeft = '3px solid #8C8C8C';
     let discordIcon = document.createElement('span');
     discord.domElement.parentElement.appendChild(discordIcon);
-    discordIcon.className = 'icon discord';
+    discordIcon.className = 'icon discord'; */
 
     let app = gui.add({ fun : () => {
         ga('send', 'event', 'link button', 'app');
