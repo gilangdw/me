@@ -264,7 +264,7 @@ function startGUI () {
     discord.__li.style.borderLeft = '3px solid #8C8C8C';
     let discordIcon = document.createElement('span');
     discord.domElement.parentElement.appendChild(discordIcon);
-    discordIcon.className = 'icon discord'; */
+    discordIcon.className = 'icon discord'; 
 
     let app = gui.add({ fun : () => {
         ga('send', 'event', 'link button', 'app');
@@ -274,7 +274,7 @@ function startGUI () {
     app.__li.style.borderLeft = '3px solid #00FF7F';
     let appIcon = document.createElement('span');
     app.domElement.parentElement.appendChild(appIcon);
-    appIcon.className = 'icon app';
+    appIcon.className = 'icon app'; */
 
     if (isMobile())
         gui.close();
