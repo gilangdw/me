@@ -2,38 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fluid Background Blog</title>
+    <title>@gilangdw</title>
     <style>
         body, html { 
             margin: 0; padding: 0; width: 100%; height: 100%; 
             background: #000; overflow: hidden; 
         }
-        canvas { 
-            width: 100%; height: 100%; 
+        /* The canvas fills the entire screen */
+        #fluid-canvas { 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
         }
+        /* Your text content sits on top */
         #content {
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            pointer-events: none; /* Mouse moves go through to the fluid */
-            z-index: 10;
+            position: relative; z-index: 10;
+            color: white; text-align: center; top: 40%;
+            font-family: sans-serif; pointer-events: none;
         }
     </style>
 </head>
 <body>
 
     <div id="content">
-        <h1>Welcome to my Blog</h1>
-        <p>Click and drag to swirl the fluid</p>
+        <h1>Gilang Destya Widodo, S.T., M.Eng.</h1>
+        <p>Move your mouse or touch the screen</p>
     </div>
 
-    <canvas id="fluid"></canvas>
+    <canvas id="fluid-canvas"></canvas>
 
-    <script src="https://cdn.jsdelivr.net/gh/PavelDoGreat/WebGL-Fluid-Simulation/scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/webgl-fluid-simulation@1.1.0/dist/webgl-fluid-simulation.min.js"></script>
 
+    <script>
+        // Check if the library loaded correctly
+        if (typeof WebGLFluid !== 'undefined') {
+            WebGLFluid(document.querySelector('#fluid-canvas'), {
+                IMMEDIATE: true, // Start showing colors immediately
+                TRIGGER: 'hover', 
+                SIM_RESOLUTION: 128,
+                DYE_RESOLUTION: 512,
+                DENSITY_DISSIPATION: 0.98,
+                VELOCITY_DISSIPATION: 0.99,
+                PRESSURE: 0.8,
+                CURL: 30,
+                SPLAT_RADIUS: 0.25,
+                SPLAT_COUNT: 5,
+                BLOOM: true,
+                TRANSPARENT: false,
+                COLOR_PALETTE: ['#00ffff', '#ff00ff', '#3300ff']
+            });
+        } else {
+            console.error("Fluid library failed to load from CDN.");
+        }
+    </script>
 </body>
 </html>
