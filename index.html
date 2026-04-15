@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     
     <script type="text/javascript" src="dat.gui.min.js"></script>
+    
     <style>
         * { user-select: none; box-sizing: border-box; }
         html, body { 
@@ -13,33 +14,27 @@
             background-color: #000; 
             margin: 0; 
             height: 100%; 
-            width: 100%;
         }
-        body { position: fixed; }
         canvas { width: 100%; height: 100%; display: block; }
 
         #content {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             color: white;
             text-align: center;
             z-index: 10;
             pointer-events: none;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            width: 90%;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            width: 100%;
         }
 
-        h1 { font-size: clamp(1.5rem, 5vw, 3rem); margin: 0; font-weight: 700; }
-        p { font-size: clamp(1rem, 2vw, 1.5rem); margin-top: 10px; opacity: 0.8; }
+        h1 { font-size: 3rem; margin: 0; }
+        p { font-size: 1.5rem; margin-top: 10px; opacity: 0.8; }
 
-        /* Hide the promo popups */
+        /* Hide popups and social links in the menu */
         .promo { display: none !important; }
-        
-        /* Styles to hide the social links in the GUI */
-        .dg .cr.function { display: none !important; } /* Hidden by default */
-        .dg .cr.number, .dg .cr.boolean, .dg .cr.string { display: block !important; } /* Show only settings */
+        .dg .cr.function { display: none !important; }
     </style>
 </head>
 <body>
@@ -53,19 +48,5 @@
 
     <script src="script.js" defer></script>
 
-    <script>
-        // Extra cleanup for the control panel (GUI)
-        window.onload = () => {
-            setTimeout(() => {
-                const folders = document.querySelectorAll('.dg .folder');
-                folders.forEach(folder => {
-                    // If you want to hide specific folders like 'App' or 'Links'
-                    if (folder.innerText.includes('Link') || folder.innerText.includes('App')) {
-                        folder.style.display = 'none';
-                    }
-                });
-            }, 1000);
-        };
-    </script>
 </body>
 </html>
