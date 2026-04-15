@@ -2,18 +2,22 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>@gilangdw</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     
     <script type="text/javascript" src="dat.gui.min.js"></script>
     <style>
-        * { user-select: none; }
-        html, body { overflow: hidden; background-color: #000; margin: 0; }
-        body { position: fixed; width: 100%; height: 100%; }
-        canvas { width: 100%; height: 100%; }
+        * { user-select: none; box-sizing: border-box; }
+        html, body { 
+            overflow: hidden; 
+            background-color: #000; 
+            margin: 0; 
+            height: 100%; 
+            width: 100%;
+        }
+        body { position: fixed; }
+        canvas { width: 100%; height: 100%; display: block; }
 
-        /* Custom Styling for your Bio */
         #content {
             position: absolute;
             top: 50%;
@@ -22,16 +26,20 @@
             color: white;
             text-align: center;
             z-index: 10;
-            pointer-events: none; /* Fluid reacts THROUGH the text */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-shadow: 0 0 20px rgba(0,0,0,0.8); /* Makes text readable over bright fluid */
+            pointer-events: none;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            width: 90%;
         }
 
-        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        p { font-size: 1.2rem; opacity: 0.9; font-style: italic; }
+        h1 { font-size: clamp(1.5rem, 5vw, 3rem); margin: 0; font-weight: 700; }
+        p { font-size: clamp(1rem, 2vw, 1.5rem); margin-top: 10px; opacity: 0.8; }
 
-        /* Hide the original promo pop-up completely */
+        /* Hide the promo popups */
         .promo { display: none !important; }
+        
+        /* Styles to hide the social links in the GUI */
+        .dg .cr.function { display: none !important; } /* Hidden by default */
+        .dg .cr.number, .dg .cr.boolean, .dg .cr.string { display: block !important; } /* Show only settings */
     </style>
 </head>
 <body>
@@ -46,22 +54,18 @@
     <script src="script.js" defer></script>
 
     <script>
-        // Change 4: Remove Social Links from the GUI
-        window.addEventListener('load', () => {
-            // Give the script a moment to build the GUI
+        // Extra cleanup for the control panel (GUI)
+        window.onload = () => {
             setTimeout(() => {
-                const guiElements = document.querySelectorAll('.dg .cr.function');
-                guiElements.forEach(el => {
-                    const text = el.textContent.toLowerCase();
-                    if (text.includes('github') || 
-                        text.includes('twitter') || 
-                        text.includes('discord') || 
-                        text.includes('app')) {
-                        el.style.display = 'none';
+                const folders = document.querySelectorAll('.dg .folder');
+                folders.forEach(folder => {
+                    // If you want to hide specific folders like 'App' or 'Links'
+                    if (folder.innerText.includes('Link') || folder.innerText.includes('App')) {
+                        folder.style.display = 'none';
                     }
                 });
-            }, 500);
-        });
+            }, 1000);
+        };
     </script>
 </body>
 </html>
