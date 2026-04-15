@@ -2,36 +2,66 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Gilang DW</title>
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>@gilangdw</title>
+    
+    <script type="text/javascript" src="dat.gui.min.js"></script>
     <style>
-        /* The Original CSS Setup */
         * { user-select: none; }
         html, body { overflow: hidden; background-color: #000; margin: 0; }
         body { position: fixed; width: 100%; height: 100%; }
         canvas { width: 100%; height: 100%; }
 
-        /* Adding your blog content layer */
+        /* Custom Styling for your Bio */
         #content {
             position: absolute;
-            top: 50%; left: 50%;
+            top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            z-index: 10;
-            pointer-events: none; /* Allows mouse to reach the fluid */
             text-align: center;
-            font-family: sans-serif;
+            z-index: 10;
+            pointer-events: none; /* Fluid reacts THROUGH the text */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-shadow: 0 0 20px rgba(0,0,0,0.8); /* Makes text readable over bright fluid */
         }
+
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        p { font-size: 1.2rem; opacity: 0.9; font-style: italic; }
+
+        /* Hide the original promo pop-up completely */
+        .promo { display: none !important; }
     </style>
-    <script type="text/javascript" src="dat.gui.min.js"></script>
 </head>
 <body>
+
     <div id="content">
         <h1>Gilang Destya Widodo, S.T., M.Eng.</h1>
-        <p>CFD is Fun</p>
+        <p>Fisika itu Menyenangkan</p>
     </div>
 
     <canvas></canvas>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+
+    <script>
+        // Change 4: Remove Social Links from the GUI
+        window.addEventListener('load', () => {
+            // Give the script a moment to build the GUI
+            setTimeout(() => {
+                const guiElements = document.querySelectorAll('.dg .cr.function');
+                guiElements.forEach(el => {
+                    const text = el.textContent.toLowerCase();
+                    if (text.includes('github') || 
+                        text.includes('twitter') || 
+                        text.includes('discord') || 
+                        text.includes('app')) {
+                        el.style.display = 'none';
+                    }
+                });
+            }, 500);
+        });
+    </script>
 </body>
 </html>
