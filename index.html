@@ -29,29 +29,24 @@
 
     <canvas id="fluid-canvas"></canvas>
 
-    <script src="https://unpkg.com/webgl-fluid-simulation@1.1.0/dist/webgl-fluid-simulation.min.js"></script>
+    <script src="fluid.js"></script>
 
-    <script>
-        window.onload = function() {
-            // Check if the library loaded
-            if (typeof WebGLFluid !== 'undefined') {
-                console.log("Fluid Library Loaded Successfully!");
-                WebGLFluid(document.querySelector('#fluid-canvas'), {
-                    SIM_RESOLUTION: 128,
-                    DENSITY_DISSIPATION: 0.98,
-                    VELOCITY_DISSIPATION: 0.99,
-                    CURL: 30,
-                    SPLAT_RADIUS: 0.3,
-                    SPLAT_COUNT: 5, // Starts with 5 splashes of color
-                    BLOOM: true,
-                });
-            } else {
-                // If it still fails, let's at least change the background so it's not just black
-                console.error("Library still blocked. Check AdBlocker or Firewall.");
-                document.body.style.background = "linear-gradient(45deg, #000428, #004e92)";
-                alert("The fluid script is being blocked by your browser/network. Try disabling AdBlocker.");
-            }
-        };
-    </script>
+<script>
+    window.onload = function() {
+        if (typeof WebGLFluid !== 'undefined') {
+            WebGLFluid(document.querySelector('#fluid-canvas'), {
+                SIM_RESOLUTION: 128,
+                DENSITY_DISSIPATION: 0.98,
+                VELOCITY_DISSIPATION: 0.99,
+                CURL: 30,
+                SPLAT_RADIUS: 0.3,
+                SPLAT_COUNT: 5,
+                BLOOM: true,
+            });
+        } else {
+            console.error("The fluid.js file could not be found in your folder.");
+        }
+    };
+</script>
 </body>
 </html>
