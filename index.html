@@ -23,6 +23,26 @@
 
         <script type="text/javascript" src="dat.gui.min.js"></script>
         <style>
+
+            #content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+            z-index: 10; /* Ensures text stays above the canvas */
+            pointer-events: none; /* Allows clicks to pass through to the fluid simulation */
+            background: transparent; /* Makes the div background transparent */
+            color: white; /* Makes the text white */
+            }
+            
+            #content h1, #content p {
+                margin: 0;
+                padding: 10px;
+                text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Optional: adds readability against bright fluids */
+            }
+            
             @font-face {
                 font-family: 'iconfont';
                 src: url('iconfont.ttf') format('truetype');
@@ -196,12 +216,12 @@
     </head>
     <body>
 
-        <div id="content">
-        <h1>Gilang Destya Widodo, S.T., M.Eng.</h1>
-        <p>Fisika itu Menyenangkan</p>
-        </div>
-        
-        <canvas></canvas>
+            <div id="content">
+            <h1>Gilang Destya Widodo, S.T., M.Eng.</h1>
+            <p>Mainkan Cursor Anda.. Enjoy the Fluids</p>
+            </div>
+            
+        <canvas> </canvas>
 
         <!-- Mother of God, pls forgive me -->
         <div class="promo">
