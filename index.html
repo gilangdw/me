@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<canvas id="fluid-canvas" style="width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
+
 
 <html>
 <head>
@@ -15,12 +15,48 @@
             color: white;
             pointer-events: none; /* Allows mouse to pass through to fluid */
         }
+
+        /* Ensure the background stays behind everything */
+        #fluid-canvas {
+        pointer-events: none; /* Allows clicks to pass through to your links */
+        display: block;
+        }
+
+/* Make sure your main container is transparent so the fluid is visible */
+body {
+    background-color: #000; /* Set a base dark color */
+    margin: 0;
+}
     </style>
 </head>
 <body>
     <div id="content"><h1>Welcome to my Blog</h1></div>
-    <canvas id="fluid"></canvas>
+    <canvas id="fluid-canvas" style="width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
 
-    <script src="assets/js/fluid.js"></script>
+    <script type="importmap">
+  {
+    "imports": {
+      "webgl-fluid-enhanced": "https://esm.run/webgl-fluid-enhanced@latest"
+    }
+  }
+</script>
+
+<script type="module">
+  import webGLFluidEnhanced from 'webgl-fluid-enhanced';
+
+  webGLFluidEnhanced.simulation(document.querySelector('#fluid-canvas'), {
+    SIM_RESOLUTION: 128,      // Quality of the fluid
+    DENSITY_DISSIPATION: 0.98, // How fast the smoke disappears
+    VELOCITY_DISSIPATION: 0.99,
+    PRESSURE: 0.8,
+    CURL: 30,                 // How much it swirls
+    SPLAT_RADIUS: 0.2,        // Size of the mouse "splat"
+    COLOR_PALETTE: ['#33ffcc', '#3300ff', '#000000'], // Match your site theme
+    BACK_COLOR: '#000000',
+    TRANSPARENT: false,
+    BLOOM: true,              // Adds that "glow" look
+    GUI: false                // Set to true if you want a control panel to test settings
+  });
+</script>
 </body>
 </html>
